@@ -1,6 +1,10 @@
 {
+  "title": "JSON schema for WinCare settings files",
   "$schema": "http://json-schema.org/draft-04/schema#",
+
   "id": "http://schema.wincare.nl/wv_settings",
+  "required": [ "conditions" ],
+
   "type": "object",
   "properties": {
     "conditions": {
@@ -26,8 +30,7 @@
                   "type": "string"
                 },
                 "value": {
-                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/value",
-                  "type": "integer"
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/value"
                 }
               },
               "additionalProperties": false,
@@ -68,7 +71,5 @@
       "additionalItems": false,
       "required": [ "0" ]
     }
-  },
-  "additionalProperties": false,
-  "required": [ "conditions" ]
+  } 
 }
