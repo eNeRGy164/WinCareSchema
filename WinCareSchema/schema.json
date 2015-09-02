@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://schema.wincare.nl/wv_settings",
+  "type": "object",
+  "properties": {
+    "conditions": {
+      "id": "http://schema.wincare.nl/wv_settings/conditions",
+      "type": "array",
+      "items": {
+        "id": "http://schema.wincare.nl/wv_settings/conditions/condition",
+        "type": "object",
+        "properties": {
+          "checks": {
+            "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks",
+            "type": "array",
+            "items": {
+              "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check",
+              "type": "object",
+              "properties": {
+                "attribute": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/attribute",
+                  "type": "string"
+                },
+                "operator": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/operator",
+                  "type": "string"
+                },
+                "value": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/value",
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "required": [ "attribute", "operator", "value" ]
+            },
+            "additionalItems": false,
+            "required": [ "1" ]
+          },
+          "true": {
+            "id": "http://schema.wincare.nl/wv_settings/conditions/condition/true",
+            "type": "array",
+            "items": {
+              "id": "http://schema.wincare.nl/wv_settings/conditions/condition/true/checkresponse",
+              "type": "object",
+              "properties": {
+                "action": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/true/checkresponse/action",
+                  "type": "string"
+                },
+                "attributes": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/true/checkresponse/attributes",
+                  "type": "array",
+                  "items": {
+                    "id": "http://schema.wincare.nl/wv_settings/conditions/condition/true/checkresponse/attributes/attribute",
+                    "type": "string"
+                  },
+                  "additionalItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "checks", "true" ]
+      },
+      "additionalItems": false,
+      "required": [ "0" ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [ "conditions" ]
+}
