@@ -10,6 +10,7 @@
     "conditions": {
       "id": "http://schema.wincare.nl/wv_settings/conditions",
       "type": "array",
+      "description": "The conditions to validate against the entity.",
       "items": {
         "id": "http://schema.wincare.nl/wv_settings/conditions/condition",
         "type": "object",
