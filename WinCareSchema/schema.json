@@ -32,6 +32,10 @@
                 },
                 "value": {
                   "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/value"
+                },
+                "linkedentitylogicalname": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/linkedentitylogicalname",
+                  "type": "string"
                 }
               },
               "additionalProperties": false,
