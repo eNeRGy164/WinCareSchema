@@ -36,6 +36,29 @@
                 "linkedentitylogicalname": {
                   "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/linkedentitylogicalname",
                   "type": "string"
+                },
+                "additionalconditions": {
+                  "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/additionalconditions",
+                  "type": "array",
+                  "items": {
+                    "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/additionalconditions/additionalcondition",
+                    "type": "object",
+                    "properties": {
+                      "attribute": {
+                        "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/additionalconditions/additionalcondition/attribute",
+                        "type": "string"
+                      },
+                      "operator": {
+                        "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/additionalconditions/additionalcondition/operator",
+                        "type": "string"
+                      },
+                      "value": {
+                        "id": "http://schema.wincare.nl/wv_settings/conditions/condition/checks/check/additionalconditions/additionalcondition/value"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [ "attribute", "operator", "value" ]
+                  } 
                 }
               },
               "additionalProperties": false,
